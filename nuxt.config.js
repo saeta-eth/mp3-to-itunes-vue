@@ -34,5 +34,9 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  /*
+  ** Plugins configuration
+  */
+  plugins: ['~plugins/buefy']
 }
