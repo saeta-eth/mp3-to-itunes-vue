@@ -1,6 +1,6 @@
 # vue-mp3-to-itunes
 
-> Nuxt.js project
+> The Vue App for mp3-to-itunes.com
 
 ## Build Setup
 
