@@ -7,12 +7,10 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: 'A simple tool where you can convert your downloaded albums to Itunes format.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },
-      { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
@@ -23,12 +21,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    extractCSS: true,
-    postcss: {
-      plugins: {
-        'postcss-custom-properties': false
-      }
-    },
     /*
     ** Run ESLint on save
     */
@@ -46,12 +38,22 @@ module.exports = {
   /*
   ** Plugins configuration
   */
-  plugins: ['~plugins/buefy'],
   css: [
     '~/assets/vue2Dropzone.css'
   ],
   modules: [
+    // Doc: https://github.com/nuxt-community/modules/tree/master/packages/toast
    '@nuxtjs/toast',
+    // Doc: https://github.com/nuxt-community/axios-module#usage
    '@nuxtjs/axios'
-  ]
+  ],
+  toast: {
+    position: 'bottom-center'
+  },
+  axios: {
+    // See https://github.com/nuxt-community/axios-module#options
+  },
+  env: {
+    baseUrl: process.env.BASE_URL
+  },
 }
