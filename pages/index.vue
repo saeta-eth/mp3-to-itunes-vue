@@ -47,8 +47,7 @@ export default {
     vsuccess(file, response) {
       this.success = true
       this.$toast.success('Well done! Your file will be downloaded in a few seconds', {
-        duration: 8000,
-        position: 'bottom-center'
+        duration: 8000
       })
       this.$refs.vueDropzone.removeAllFiles()
       this.sendConvertRequest(response.fileName)
