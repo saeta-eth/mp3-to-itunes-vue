@@ -35,17 +35,18 @@ export default {
     return {
       // See https://rowanwins.github.io/vue-dropzone/docs/dist/index.html#/props
       options: {
-        url: `${(process.env.baseUrl || 'http://localhost:8080')}/api/upload`,
+        url: `${process.env.baseUrl}/api/upload`,
         acceptedFiles: 'application/zip',
         maxFilesize: 200, //MB
-        dictDefaultMessage: `<i class='fa fa-cloud-upload'></i> Drop your album here (.zip) to convert it.`
+        dictDefaultMessage: `<i class='fa fa-cloud-upload'></i> Drop your album here (.zip) to convert it.`,
+        timeout: 0
       }
     }
   },
   methods: {
     vsuccess(file, response) {
       this.success = true
-      this.$store.$toast.success('Well done! Your file will be downloaded in a few seconds', {
+      this.$toast.success('Well done! Your file will be downloaded in a few seconds', {
         duration: 8000,
         position: 'bottom-center'
       })
@@ -54,16 +55,15 @@ export default {
     },
     verror(file, response) {
       this.error = true
-      this.$store.$toast.error('Something is wrong')
+      this.$toast.error('Something is wrong')
     },
     async sendConvertRequest(id) {
-      const url = `${(process.env.baseUrl || 'http://localhost:8080')}/api/converter/${id}`
-      const download = `${(process.env.baseUrl || 'http://localhost:8080')}/api/converter/${id}`
+      const url = `${process.env.baseUrl}/api/converter/${id}`
       try {
         await this.$axios.$put(url)
-        window.location.assign(download)
+        window.location.assign(url)
       } catch(err) {
-        this.$store.$toast.error('Something is wrong')
+        this.$toast.error('Something is wrong')
       }
     }
   }
