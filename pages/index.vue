@@ -113,4 +113,8 @@ export default {
 .dz-success-mark {
   display: none !important;
 }
+
+.dz-error-message {
+  display: none !important;
+}
 </style>
