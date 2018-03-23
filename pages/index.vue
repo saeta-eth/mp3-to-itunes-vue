@@ -19,6 +19,17 @@
         ></dropzone>
       </div>
     </div>
+    <div class="made-by">
+      <p>
+        <a href="https://github.com/slorenzo/mp3-to-itunes.com">It's an open source project</a>
+      </p>
+      <p>
+        Made with 
+        <img width="20px" height="20px" src="https://twemoji.maxcdn.com/svg/2665.svg">
+        by 
+        <a href="https://github.com/slorenzo">Sebastian Lorenzo</a>
+      </p>
+    </div>
   </section>
 </template>
 
@@ -117,4 +128,23 @@ export default {
 .dz-error-message {
   display: none !important;
 }
+
+.made-by {
+  font-weight: 300;
+  color: #526488;
+  position: absolute;
+  text-align: right;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  padding: 3px;
+}
+
 </style>
