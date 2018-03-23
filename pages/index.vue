@@ -50,7 +50,7 @@ export default {
         duration: 8000
       })
       this.$refs.vueDropzone.removeAllFiles()
-      this.sendConvertRequest(response.fileName)
+      this.sendConvertRequest(response.id)
     },
     verror(file, response) {
       this.error = true
