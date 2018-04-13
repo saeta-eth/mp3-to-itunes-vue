@@ -9,7 +9,7 @@
         A simple tool where you can convert your downloaded albums to <b>Itunes format</b>.
       </h3>
       <div class="upload">
-        <dropzone 
+        <dropzone
           id="foo"
           ref="vueDropzone"
           :options="options"
@@ -18,17 +18,17 @@
           @vdropzone-error="verror"
         ></dropzone>
       </div>
-    </div>
-    <div class="made-by">
-      <p>
-        <a href="https://github.com/slorenzo/mp3-to-itunes.com">It's an open source project</a>
-      </p>
-      <p>
-        Made with 
-        <img width="20px" height="20px" src="https://twemoji.maxcdn.com/svg/2665.svg">
-        by 
-        <a href="https://github.com/slorenzo">Sebastian Lorenzo</a>
-      </p>
+      <div class="made-by">
+        <p>
+          <a href="https://github.com/slorenzo/mp3-to-itunes.com">It's an open source project</a>
+        </p>
+        <p>
+          Made with
+          <img width="20px" height="20px" src="https://twemoji.maxcdn.com/svg/2665.svg">
+          by
+          <a href="https://github.com/slorenzo">Sebastian Lorenzo</a>
+        </p>
+      </div>
     </div>
   </section>
 </template>
@@ -132,10 +132,6 @@ export default {
 .made-by {
   font-weight: 300;
   color: #526488;
-  position: absolute;
-  text-align: right;
-  right: 0;
-  bottom: 0;
   margin: 10px;
 }
 
