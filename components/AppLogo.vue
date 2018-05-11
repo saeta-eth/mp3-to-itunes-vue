@@ -1,67 +1,56 @@
 <template>
-  <div class="VueToNuxtLogo">
-    <div class="Triangle Triangle--two"/>
-    <div class="Triangle Triangle--one"/>
-    <div class="Triangle Triangle--three"/>
-    <div class="Triangle Triangle--four"/>
+  <div class="logo">
+    <img src="https://s3.us-west-1.amazonaws.com/mp3-to-itunes/logo.png" width="250" height="250" />
   </div>
 </template>
 
 <style>
-.VueToNuxtLogo {
+.logo {
   display: inline-block;
-  animation: turn 2s linear forwards 1s;
-  transform: rotateX(180deg);
+  animation: turn;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
   position: relative;
   overflow: hidden;
-  height: 180px;
-  width: 245px;
+  margin-top: 50px;
+  padding: 5px;
 }
 
-.Triangle {
+.logo img {
+  filter: drop-shadow(0px 0px 3px black);
+}
+
+.logo::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
+  width: 230px;
   height: 0;
-}
-
-.Triangle--one {
-  border-left: 105px solid transparent;
-  border-right: 105px solid transparent;
-  border-bottom: 180px solid #41B883;
-}
-
-.Triangle--two {
-  top: 30px;
-  left: 35px;
-  animation: goright 0.5s linear forwards 3.5s;
-  border-left: 87.5px solid transparent;
-  border-right: 87.5px solid transparent;
-  border-bottom: 150px solid #3B8070;
-}
-
-.Triangle--three {
-  top: 60px;
-  left: 35px;
-  animation: goright 0.5s linear forwards 3.5s;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-bottom: 120px solid #35495E;
-}
-
-.Triangle--four {
-  top: 120px;
-  left: 70px;
-  animation: godown 0.5s linear forwards 3s;
-  border-left: 35px solid transparent;
-  border-right: 35px solid transparent;
-  border-bottom: 60px solid #fff;
+  bottom: 0;
+  left: 15px;
+  background-color: rgba(113, 108, 93, 1);
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  opacity: 0.2;
+  box-shadow: 0px -1px 3px 1px rgba(113, 108, 93, 1);
 }
 
 @keyframes turn {
+  0% {
+    transform:  rotateY(360deg);
+  }
+  25% {
+    transform: rotateY(340deg);
+  }
+  50% {
+    transform: rotateY(360deg)
+  }
+  75% {
+    transform: rotateY(380deg);
+  }
   100% {
-    transform: rotateX(0deg);
+    transform:  rotateY(360deg);
   }
 }
 
