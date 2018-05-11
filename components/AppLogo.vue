@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <img src="https://s3.us-west-1.amazonaws.com/mp3-to-itunes/logo.png" width="250" height="250" />
+    <img src="https://s3.us-west-1.amazonaws.com/mp3-to-itunes/logo.png" />
   </div>
 </template>
 
@@ -19,7 +19,16 @@
 }
 
 .logo img {
+  width: 220px;
+  height: 220px;
   filter: drop-shadow(0px 0px 3px black);
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 155px;
+    height: 155px;
+  }
 }
 
 .logo::before {

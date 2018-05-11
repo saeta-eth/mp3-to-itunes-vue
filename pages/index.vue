@@ -24,9 +24,9 @@
         </p>
         <p>
           Made with
-          <img width="20px" height="20px" src="https://twemoji.maxcdn.com/svg/2665.svg">
+          <img width="12px" height="12px" src="https://twemoji.maxcdn.com/svg/2665.svg">
           by
-          <a href="https://github.com/slorenzo">Sebastian Lorenzo</a>
+          <a href="https://slorenzo.me/">Sebastián Lorenzo</a>
         </p>
       </div>
     </div>
@@ -132,6 +132,7 @@ export default {
 }
 
 .made-by {
+  font-size: 12px;
   font-weight: 300;
   color: #526488;
   margin: 10px;
