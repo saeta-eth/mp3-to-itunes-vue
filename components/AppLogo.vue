@@ -14,7 +14,7 @@
   animation-direction: alternate;
   position: relative;
   overflow: hidden;
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 5px;
 }
 

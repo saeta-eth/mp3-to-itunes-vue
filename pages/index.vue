@@ -5,9 +5,9 @@
       <h1 class="title">
         mp3-to-itunes
       </h1>
-      <h3 class="description">
+      <h2 class="description">
         A simple tool where you can convert your downloaded albums to <b>Itunes format</b>.
-      </h3>
+      </h2>
       <div class="upload">
         <dropzone
           id="foo"
@@ -90,23 +90,25 @@ export default {
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 40px;
   color: #35495e;
   letter-spacing: 1px;
+  margin-top: 10px;
 }
 
 .description {
+  font-size: 1em;
   font-weight: 300;
   color: #526488;
   letter-spacing: 1px;
-  padding-bottom: 15px;
+  margin: 10px;
 }
 
 .upload {
-  padding-top: 15px;
+  padding-top: 5px;
 }
 
 .dropzone {
@@ -118,7 +120,7 @@ export default {
 }
 
 .vue-dropzone {
-  margin: 20px;
+  margin: 10px;
 }
 
 .dz-success-mark {
