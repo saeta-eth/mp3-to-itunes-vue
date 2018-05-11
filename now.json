@@ -1,0 +1,9 @@
+{
+  "name": "vue-mp3-to-itunes",
+  "alias": [
+    "mp3-to-itunes.com"
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
